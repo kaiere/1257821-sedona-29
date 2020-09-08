@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Olga Chupeykina](https://up.htmlacademy.ru/htmlcss/29/user/1257821).
-* Наставник: `Неизвестно`.
+* Наставник: [Евгений Суглобов](https://htmlacademy.ru/profile/id1133747).
 
 ---
 
