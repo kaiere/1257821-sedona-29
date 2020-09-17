@@ -18,6 +18,30 @@
        url("/fonts/ptsansbold.woff") format("woff");
 }
 
+/* Colors */
+
+:root {
+  --basic-background-color: #F2F2F2;
+  --basic-white: #FFFFFF;
+  --basic-black: #000000;
+  --additional-black: #231F20;
+  --dark-grey: #333333;
+  --basic-blue: #81B3D2;
+  --darker-blue: #669EC0;
+  --dark-blue: #5496BD;
+  --light-grey: #EEEEEE;
+  --light-add-grey: #EBEBEB;
+  --darker-grey: #A9A9A9;
+  --blocked-grey: #6A6A6A;
+  --additional-grey: #ABABAB;
+  --basic-brown: #766357;
+  --darker-brown: #604E43;
+  --dark-brown: #503E33;
+  --additional-brown: #766458;
+  --basic-shadow: rgba(0, 1, 1, 0.2);
+  --popup-shadow: rgba(0, 1, 1, 0.15);
+}
+
 /* Global */
 
 body {
