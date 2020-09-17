@@ -10,10 +10,10 @@
 }
 
 @font-face {
-  font-family: "PT Sans";
+  font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: bold;
-  src: local("PT Sans"),
+  src: local("PT Sans Bold"),
        url("/fonts/ptsansbold.woff2") format("woff2"),
        url("/fonts/ptsansbold.woff") format("woff");
 }
@@ -23,7 +23,9 @@
 :root {
   --basic-background-color: #F2F2F2;
   --basic-white: #FFFFFF;
+  --transparent-white: rgba(255, 255, 255, 0.3);
   --basic-black: #000000;
+  --transparent-black: rgba(0, 0, 0, 0.3);
   --additional-black: #231F20;
   --dark-grey: #333333;
   --basic-blue: #81B3D2;
@@ -40,12 +42,13 @@
   --additional-brown: #766458;
   --basic-shadow: rgba(0, 1, 1, 0.2);
   --popup-shadow: rgba(0, 1, 1, 0.15);
+  --footer-white: rgba(255, 255, 255, 0.9);
 }
 
 /* Global */
 
 body {
-  font-family: "PT Sans", sans-serif;
+  font-family: "PT Sans", Arial, sans-serif;
   min-width: 1280px;
   height: auto;
   margin: 0;
@@ -54,5 +57,347 @@ body {
   line-height: 26px;
   font-weight: bold;
   text-transform: uppercase;
-  background-repeat: no-repeat;
+  background-color: var(--basic-background-color);
+  color: var(--basic-black);
+}
+
+a {
+  text-decoration: none;
+}
+
+.hidden-title {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
+/* Header */
+
+.main-header {
+  width: 1200px;
+  height: auto;
+  background-color: var(--basic-white);
+  box-shadow: var(--basic-shadow);
+}
+
+.site-menu {
+  list-style: none;
+  margin-bottom: 0;
+  display: flex;
+}
+
+.site-menu-item {
+  margin: 0.5em; /* временно, для более удобного визуального отображения, потом буду править */
+}
+
+.site-menu a {
+  color: var(--basic-black);
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 26px;
+  text-transform: uppercase;
+}
+
+.site-menu a:hover,
+.site-menu a:focus {
+  color: var(--basic-blue);
+}
+
+.site-menu a:active {
+  color: var(--transparent-black);
+}
+
+/* Main */
+
+/* для визуально более удобного отображения сразу сделала списки и блоки флексом - потом буду выправлять */
+
+.main-container {
+  width: 1200px;
+  height: auto;
+  background-color: var(--basic-white);
+  box-shadow: var(--basic-shadow);
+}
+
+/* about-mini */
+
+.about-mini {
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.about-mini h3 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  margin-top: 0;
+}
+
+.about-mini p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
+}
+
+/* first reason - это ты */
+
+.first-reason {
+  background-color: var(--basic-blue);
+  display: flex;
+  width: 1200px;
+  height: 256px;
+}
+
+.first-reason .text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 256px;
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--basic-white);
+}
+
+.first-reason h3 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.first-reason p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* Features */
+
+.features {
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.features-list {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.features-list-item {
+  margin: 0.5em; /* временно, для более удобного визуального отображения, потом буду править */
+}
+
+.features-list-item h3 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.features-list-item p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--dark-grey);
+}
+
+/* a second reason - все твои мечты */
+
+.second-reason {
+  background-color: var(--basic-blue);
+  display: flex;
+  width: 1200px;
+  height: 256px;
+}
+
+.second-reason .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 256px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.second-reason h3 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+}
+
+.second-reason p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+/* last reasons */
+
+.last-three-reasons {
+  background-color: var(--light-grey);
+  text-align: center;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reasons-list {
+  display: flex;
+  list-style: none;
+}
+
+.reasons-list-item {
+  margin: 0.5em; /* временно, для более удобного визуального отображения, потом буду править */
+}
+
+.reasons-list-item h3 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  color: var(--basic-black);
+}
+
+.reasons-list-item p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--dark-grey);
+}
+
+/* Hotel search */
+
+.hotel-search {
+  align-items: center;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.hotel-search h2 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 24px;
+}
+
+.hotel-search p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.button-hotel-search {
+  width: 568px;
+  height: 86px;
+  background-color: var(--basic-brown);
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  color: var(--basic-white);
+  text-align: center;
+  text-transform: uppercase;
+  border-color: transparent;
+}
+
+.button-hotel-search:hover {
+  background-color: var(--darker-brown);
+}
+
+.button-hotel-search:active {
+  background-color: var(--dark-brown);
+  color: var(--transparent-white);
+}
+
+/* Map */
+
+.map {
+  height: 594px;
+}
+
+/* Footer */
+
+.main-footer {
+  width: 1200px;
+  height: 120px;
+  background-color: var(--footer-white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
+.contact p {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 26px;
+  text-align: center;
+  color: var(--basic-black);
+}
+
+.contact a {
+  color: var(--basic-black);
+}
+
+.social-network-list a {
+  color: var(--basic-black);
+}
+
+.social-network-list {
+  list-style: none;
+  display: flex;
+}
+
+.social-network-list li {
+  margin: 0.5em;
+}
+
+.designed-by p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 26px;
 }
