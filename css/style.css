@@ -3,19 +3,21 @@
 @font-face {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
-  src: local("PT Sans"),
-       url("/fonts/ptsans.woff2") format("woff2"),
-       url("/fonts/ptsans.woff") format("woff");
+  font-weight: 400;
+  src: local("PT Sans"), local("PTsans"),
+       url("../fonts/ptsans.woff2") format("woff2"),
+       url("../fonts/ptsans.woff") format("woff");
+       font-display: swap;
 }
 
 @font-face {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
-  src: local("PT Sans Bold"),
-       url("/fonts/ptsansbold.woff2") format("woff2"),
-       url("/fonts/ptsansbold.woff") format("woff");
+  font-weight: 700;
+  src: local("PT Sans Bold"), local("PTsans Bold"),
+       url("../fonts/ptsansbold.woff2") format("woff2"),
+       url("../fonts/ptsansbold.woff") format("woff");
+       font-display: swap;
 }
 
 /* Colors */
@@ -55,7 +57,7 @@ body {
   padding: 0;
   font-size: 14px;
   line-height: 26px;
-  font-weight: bold;
+  font-weight: 700;
   text-transform: uppercase;
   background-color: var(--basic-background-color);
   color: var(--basic-black);
@@ -96,7 +98,7 @@ a {
   color: var(--basic-black);
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   line-height: 26px;
   text-transform: uppercase;
@@ -133,7 +135,7 @@ a {
 .about-mini h3 {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   margin-top: 0;
@@ -142,7 +144,7 @@ a {
 .about-mini p {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 26px;
 }
@@ -171,7 +173,7 @@ a {
 .first-reason h3 {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 21px;
 }
@@ -179,7 +181,7 @@ a {
 .first-reason p {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
 }
@@ -204,13 +206,14 @@ a {
 }
 
 .features-list-item {
+
   margin: 0.5em; /* временно, для более удобного визуального отображения, потом буду править */
 }
 
 .features-list-item h3 {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -219,7 +222,7 @@ a {
 .features-list-item p {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: var(--dark-grey);
@@ -249,7 +252,7 @@ a {
 .second-reason h3 {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 21px;
 }
@@ -257,7 +260,7 @@ a {
 .second-reason p {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
 }
@@ -286,7 +289,7 @@ a {
 .reasons-list-item h3 {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
@@ -295,7 +298,7 @@ a {
 .reasons-list-item p {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: var(--dark-grey);
@@ -312,7 +315,7 @@ a {
 .hotel-search h2 {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 30px;
   line-height: 24px;
 }
@@ -320,7 +323,7 @@ a {
 .hotel-search p {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 21px;
 }
@@ -331,7 +334,7 @@ a {
   background-color: var(--basic-brown);
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   color: var(--basic-white);
@@ -370,7 +373,7 @@ a {
 .contact p {
   font-family: "PT Sans Bold";
   font-style: normal;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
@@ -397,7 +400,7 @@ a {
 .designed-by p {
   font-family: "PT Sans";
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   font-size: 14px;
   line-height: 26px;
 }
