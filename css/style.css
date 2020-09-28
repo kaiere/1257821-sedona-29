@@ -347,9 +347,11 @@ a {
   background-color: var(--darker-brown);
 }
 
-.button-hotel-search:active {
+.button-hotel-search:focus, .button-hotel-search:active {
   background-color: var(--dark-brown);
   color: var(--transparent-white);
+  border: 0;
+  outline: none !important;
 }
 
 /* Map */
@@ -366,7 +368,166 @@ a {
 
 /* Sorting */
 
+.sorting {
+  text-transform: uppercase;
+  color: var(--basic-black);
+  }
 
+.sorting h2 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  margin: auto;
+}
+
+.sorting p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-list {
+  list-style: none;
+  display: flex;
+}
+
+.sorting-list-item {
+  margin: 0.5em;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+}
+
+.sorting-list-item a {
+  color: var(--transparent-black);
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.sorting-list-item a:hover {
+  color: var(--basic-blue);
+  border-bottom: 1px dashed var(--basic-blue);
+}
+
+.sorting-list-item a:focus {
+  color: var(--basic-black);
+  border-bottom: none;
+}
+
+.sorting-list-item a:active {
+  color: var(--basic-blue);
+  border-bottom: none;
+}
+
+.sorting-icons-list {
+  list-style: none;
+} /* иконки будут позже - декоративная графика */
+
+/* Hotels Search Result */
+
+.hotels-search-result {
+  text-transform: uppercase;
+  color: var(--basic-black);
+  }
+
+.results-list {
+  list-style: none;
+  margin: auto;
+}
+
+.results-list h3 {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+}
+
+.hotel-price {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--dark-grey);
+  display: flex;
+}
+
+.results-list-item p {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--dark-grey);
+  text-align: center;
+  padding: 4px;
+}
+
+.raiting {
+  width: 110px;
+  height: 27px;
+  background-color: var(--basic-background-color);
+}
+
+.button-details {
+  width: 110px;
+  height: 27px;
+  background-color: var(--basic-blue);
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+  text-align: center;
+  text-transform: uppercase;
+  border-color: transparent;
+}
+
+.button-details:hover {
+  background-color: var(--darker-blue);
+  border-color: transparent;
+}
+
+.button-details:focus, .button-details:active {
+  background-color: var(--dark-blue);
+  color: var(--transparent-white);
+  border-color: transparent;
+  border: 0;
+  outline: none !important;
+}
+
+.button-book {
+  width: 142px;
+  height: 27px;
+  background-color: var(--basic-brown);
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 21px;
+  color: var(--basic-white);
+  text-align: center;
+  text-transform: uppercase;
+  border-color: transparent;
+}
+
+.button-book:hover {
+  background-color: var(--darker-brown);
+}
+
+.button-book:focus, .button-book:active {
+  background-color: var(--dark-brown);
+  color: var(--transparent-white);
+  border: 0;
+  outline: none !important;
+}
 
 /* Footer */
 
