@@ -124,6 +124,10 @@ a {
   box-shadow: var(--basic-shadow);
 }
 
+.main-image {
+  background-color: var(--darker-grey); /* временно цветной фон */
+}
+
 /* about-mini */
 
 .about-mini {
