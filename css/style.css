@@ -75,6 +75,24 @@ a {
   margin: -1px;
 }
 
+/* Grid */
+
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Header */
 
 .main-header {
@@ -84,14 +102,20 @@ a {
   box-shadow: var(--basic-shadow);
 }
 
+/* .main-header-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+/* Тренировки ради сделала навигацию на гридах, но переделаю на флекс обратно в следующих заданиях*/
+
 .site-menu {
   list-style: none;
   margin-bottom: 0;
-  display: flex;
-}
-
-.site-menu-item {
-  margin: 0.5em; /* временно, для более удобного визуального отображения, потом буду править */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  text-align: center;
 }
 
 .site-menu a {
@@ -126,6 +150,7 @@ a {
 
 .main-image {
   background-color: var(--darker-grey); /* временно цветной фон */
+  text-align: center;
 }
 
 /* about-mini */
@@ -157,7 +182,8 @@ a {
 
 .first-reason {
   background-color: var(--basic-blue);
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content min-content;
   width: 1200px;
   height: 256px;
 }
@@ -195,23 +221,19 @@ a {
 .features {
   text-align: center;
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .features-list {
   list-style: none;
-  display: flex;
   justify-content: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   overflow: auto;
-}
-
-.features-list-item {
-
-  margin: 0.5em; /* временно, для более удобного визуального отображения, потом буду править */
+  margin: 0;
+  padding: 0;
 }
 
 .features-list-item h3 {
@@ -236,7 +258,8 @@ a {
 
 .second-reason {
   background-color: var(--basic-blue);
-  display: flex;
+  display: grid;
+  grid-template-columns: min-content min-content;
   width: 1200px;
   height: 256px;
 }
@@ -275,19 +298,16 @@ a {
   background-color: var(--light-grey);
   text-align: center;
   text-transform: uppercase;
-  display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
 .reasons-list {
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
-}
-
-.reasons-list-item {
-  margin: 0.5em; /* временно, для более удобного визуального отображения, потом буду править */
+  margin: 0;
+  padding: 0;
 }
 
 .reasons-list-item h3 {
@@ -539,7 +559,8 @@ a {
   width: 1200px;
   height: 120px;
   background-color: var(--footer-white);
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
@@ -566,10 +587,19 @@ a {
 .social-network-list {
   list-style: none;
   display: flex;
+  padding: 0;
 }
 
 .social-network-list li {
   margin: 0.5em;
+}
+
+.social-network {
+  justify-self: center;
+}
+
+.designed-by {
+  justify-self: center;
 }
 
 .designed-by p {
