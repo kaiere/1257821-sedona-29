@@ -395,7 +395,16 @@ a {
 .sorting {
   text-transform: uppercase;
   color: var(--basic-black);
+  display: grid;
+  grid-template-columns: 127px 130px 1fr 1fr; /* Последняя колонка - для иконок потом */
+  margin-left: 73px;
   }
+
+.sorting-group {
+  justify-self: end;
+  margin: 0;
+  padding: 31px 0 37px;
+}
 
 .sorting h2 {
   font-family: "PT Sans Bold";
@@ -403,7 +412,7 @@ a {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin: auto;
+  margin-top: 29px;
 }
 
 .sorting p {
@@ -417,6 +426,7 @@ a {
 .sorting-list {
   list-style: none;
   display: flex;
+  padding: 10px 40px 0 36px;
 }
 
 .sorting-list-item {
@@ -457,11 +467,14 @@ a {
 .hotels-search-result {
   text-transform: uppercase;
   color: var(--basic-black);
+  width: 1054px;
+  margin-left: 73px;
   }
 
 .results-list {
   list-style: none;
   margin: auto;
+  padding: 0;
 }
 
 .results-list h3 {
@@ -470,6 +483,8 @@ a {
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
+  margin-top: 31px;
+  margin-bottom: 0;
 }
 
 .hotel-price {
@@ -480,6 +495,21 @@ a {
   line-height: 21px;
   color: var(--dark-grey);
   display: flex;
+  margin: 5px 0 15px 0;
+}
+
+.result-container {
+  padding: 0;
+  margin-left: 30px;
+}
+
+.results-list-item {
+  display: grid;
+  grid-template-columns: 134px 792px 1fr;
+}
+
+.results-list-item img {
+  margin: 35px 0 35px 0;
 }
 
 .results-list-item p {
@@ -490,13 +520,15 @@ a {
   line-height: 21px;
   color: var(--dark-grey);
   text-align: center;
-  padding: 4px;
+  margin-top: 4px;
 }
 
 .raiting {
   width: 110px;
   height: 27px;
   background-color: var(--basic-background-color);
+  justify-self: end;
+  margin-top: 98px;
 }
 
 .button-details {

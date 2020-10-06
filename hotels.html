@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
@@ -7,7 +7,7 @@
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
-  <body>
+  <body class="page-body container">
 
     <header class="main-header">
       <nav class="main-navigation">
@@ -31,7 +31,7 @@
 
       <section class="sorting">
         <h2>Найдено:</h2><!--Результат поиска-->
-        <p>Сортировка:</p><!--Для сортировки результатов поиска-->
+        <p class="sorting-group">Сортировка:</p><!--Для сортировки результатов поиска-->
         <ul class="sorting-list">
           <li class="sorting-list-item"><a href="#">По цене</a></li>
           <li class="sorting-list-item"><a href="#">По типу</a></li>
@@ -48,14 +48,16 @@
         <ul class="results-list"><!--Возможно, элементы списка будут оформлены в виде таблицы - еще думаю-->
           <li class="results-list-item">
             <img src="img/amara-resort.jpg" width="135" height="90" alt="Фото отеля">
-            <h3>Amara Resort & Spa</h3><!--Название отеля-->
-            <dl class="hotel-price"> <!--Соотношение типа жилья и стоимости-->
-              <dt>Гостиница</dt>
-              <dd>от 4000 рублей</dd>
-            </dl>
-            <!--Блок с кнопками-->
-              <button class="button-details" type="button">Подробнее</button>
-              <button class="button-book" type="button">Забронировать</button>
+            <div class="result-container">
+              <h3>Amara Resort & Spa</h3><!--Название отеля-->
+              <dl class="hotel-price"> <!--Соотношение типа жилья и стоимости-->
+                <dt>Гостиница</dt>
+                <dd>от 4000 рублей</dd>
+              </dl>
+              <!--Блок с кнопками-->
+                <button class="button-details" type="button">Подробнее</button>
+                <button class="button-book" type="button">Забронировать</button>
+            </div>
             <div class="raiting">
               <p><!--Блок с рейтингом, иконки звездочек будут в CSS-->
                 Рейтинг: 8,5
@@ -64,14 +66,16 @@
           </li>
           <li class="results-list-item">
             <img src="img/desert-quail.jpg" width="135" height="90" alt="Фото отеля">
-            <h3>Desert Quail Inn</h3><!--Название отеля-->
-            <dl class="hotel-price"><!--Соотношение типа жилья и стоимости-->
-              <dt>Мотель</dt>
-              <dd>от 3000 рублей</dd>
-            </dl>
-            <!--Блок с кнопками-->
-              <button class="button-details" type="button">Подробнее</button>
-              <button class="button-book" type="button">Забронировать</button>
+            <div class="result-container">
+              <h3>Desert Quail Inn</h3><!--Название отеля-->
+              <dl class="hotel-price"><!--Соотношение типа жилья и стоимости-->
+                <dt>Мотель</dt>
+                <dd>от 3000 рублей</dd>
+              </dl>
+              <!--Блок с кнопками-->
+                <button class="button-details" type="button">Подробнее</button>
+                <button class="button-book" type="button">Забронировать</button>
+            </div>
             <div class="raiting">
               <p><!--Блок с рейтингом, иконки звездочек будут в CSS-->
                 Рейтинг: 8,9
@@ -80,14 +84,16 @@
           </li>
           <li class="results-list-item">
             <img src="img/poco-diablo.jpg" width="135" height="90" alt="Фото отеля">
-            <h3>Villas at Poco Diablo</h3><!--Название отеля-->
-            <dl class="hotel-price"><!--Соотношение типа жилья и стоимости-->
-              <dt>Апартаменты</dt>
-              <dd>от 2000 рублей</dd>
-            </dl>
-            <!--Блок с кнопками-->
-              <button class="button-details" type="button">Подробнее</button>
-              <button class="button-book" type="button">Забронировать</button>
+            <div class="result-container">
+              <h3>Villas at Poco Diablo</h3><!--Название отеля-->
+              <dl class="hotel-price"><!--Соотношение типа жилья и стоимости-->
+                <dt>Апартаменты</dt>
+                <dd>от 2000 рублей</dd>
+              </dl>
+              <!--Блок с кнопками-->
+                <button class="button-details" type="button">Подробнее</button>
+                <button class="button-book" type="button">Забронировать</button>
+            </div>
             <div class="raiting">
               <p><!--Блок с рейтингом, иконки звездочек будут в CSS-->
                 Рейтинг: 9,2
