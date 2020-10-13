@@ -51,7 +51,6 @@
 
 body {
   font-family: "PT Sans", Arial, sans-serif;
-  min-width: 1280px;
   height: auto;
   margin: 0;
   padding: 0;
@@ -102,20 +101,29 @@ a {
   box-shadow: var(--basic-shadow);
 }
 
-/* .main-header-logo {
+.main-header-logo {
   position: absolute;
   left: 50%;
+  top: 0%;
   transform: translateX(-50%);
-} */
-
-/* Тренировки ради сделала навигацию на гридах, но переделаю на флекс обратно в следующих заданиях*/
+}
 
 .site-menu {
-  list-style: none;
-  margin-bottom: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 0;
+    margin: 11px 73px;
+}
+
+.site-menu li:nth-child(2) {
+  padding-right: 15px;
+}
+
+.site-menu li:nth-child(3) {
+  margin-left: 255px;
+  padding-left: 10px;
 }
 
 .site-menu a {
@@ -227,13 +235,17 @@ a {
 
 .features-list {
   list-style: none;
-  justify-content: center;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr; */
   align-items: center;
   overflow: auto;
-  margin: 0;
+  margin: 0 73px;
   padding: 0;
+}
+
+.features-list-item {
+  text-align: center;
 }
 
 .features-list-item h3 {
@@ -303,10 +315,13 @@ a {
 }
 
 .reasons-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
   list-style: none;
-  margin: 0;
+  justify-content: space-between;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr; */
+  align-items: center;
+  overflow: auto;
+  margin: 0 73px;
   padding: 0;
 }
 
