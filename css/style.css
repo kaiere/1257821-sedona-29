@@ -101,7 +101,7 @@ a {
   box-shadow: var(--basic-shadow);
 }
 
-.main-header-logo {
+/* .main-header-logo {
   position: absolute;
   left: 50%;
   top: 0%;
@@ -124,6 +124,26 @@ a {
 .site-menu li:nth-child(3) {
   margin-left: 255px;
   padding-left: 10px;
+} */
+
+.site-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding: 0;
+  margin: 11px 73px;
+}
+
+.site-menu-item {
+  padding-right: 0px;
+}
+
+.main-header-logo {
+  position: absolute;
+  left: 50%;
+  top: 0%;
+  transform: translateX(-50%);
 }
 
 .site-menu a {
