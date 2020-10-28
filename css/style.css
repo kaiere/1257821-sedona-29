@@ -115,43 +115,34 @@ a {
 }
 
 .site-menu {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    text-align: center;
-    padding: 0;
-    margin: 11px 73px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.site-menu li:nth-child(1) {
+  padding-left: 6px;
 }
 
 .site-menu li:nth-child(2) {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 
 .site-menu li:nth-child(3) {
   margin-left: 255px;
-  padding-left: 10px;
+  padding-left: 18px;
 }
 
-/* .site-menu {
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
+.site-menu li {
+  width: 20%;
+  padding-left: 3px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   text-align: center;
-  padding: 0;
-  margin: 11px 73px;
+  align-items: center;
 }
-
-.site-menu-item {
-  padding-right: 0px;
-}
-
-.main-header-logo {
-  position: absolute;
-  left: 50%;
-  top: 0%;
-  transform: translateX(-50%);
-  z-index: 1;
-} */
 
 .site-menu a {
   color: var(--basic-black);
@@ -163,9 +154,12 @@ a {
   text-transform: uppercase;
 }
 
-.site-menu a:hover,
-.site-menu a:focus {
+.site-menu a:hover {
   color: var(--basic-blue);
+}
+
+.site-menu a:focus {
+  color: var(--basic-brown);
 }
 
 .site-menu a:active {
@@ -173,8 +167,6 @@ a {
 }
 
 /* Main */
-
-/* для визуально более удобного отображения сразу сделала списки и блоки флексом - потом буду выправлять */
 
 .main-container {
   width: 1200px;
@@ -222,6 +214,7 @@ a {
   font-size: 21px;
   line-height: 26px;
   margin-top: 42px;
+  margin-bottom: 44px
 }
 
 .about-mini p {
@@ -230,7 +223,7 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
-  margin-bottom: 50px;
+  margin-bottom: 51px;
 }
 
 /* first reason - это ты */
@@ -261,6 +254,7 @@ a {
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
+  padding-bottom: 7px;
 }
 
 .first-reason p {
@@ -269,6 +263,19 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  margin-top: -3px;
+}
+
+.paragraph-container {
+  padding-bottom: 11px;
+}
+
+.reason-number {
+  margin-bottom: 27px;
+}
+
+.image-container {
+  height: 256px;
 }
 
 /* Features */
@@ -283,12 +290,11 @@ a {
 .features-list {
   list-style: none;
   justify-content: space-between;
-  display: flex;
-  flex-wrap: wrap;
-  /* grid-template-columns: 1fr 1fr 1fr; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
   align-items: center;
   overflow: auto;
-  margin: 0 73px;
+  margin: 3px 0px 2px 0px;
   padding: 0;
 }
 
@@ -330,6 +336,7 @@ a {
   width: 75px;
   height: 70px;
   transform: translateX(-50%);
+  margin-top: 1px;
 }
 
 .features-item-gifts::before {
@@ -342,6 +349,7 @@ a {
   width: 64px;
   height: 77px;
   transform: translateX(-50%);
+  margin-top: -5px;
 }
 
 .features-list-item p {
@@ -352,6 +360,7 @@ a {
   line-height: 21px;
   color: var(--dark-grey);
   margin-bottom: 80px;
+  margin-top: 25px;
 }
 
 /* a second reason - все твои мечты */
@@ -382,6 +391,7 @@ a {
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
+  padding-bottom: 7px;
 }
 
 .second-reason p {
@@ -390,6 +400,7 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
+  margin-top: -3px;
 }
 
 /* last reasons */
@@ -424,7 +435,7 @@ a {
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  margin-top: 50px;
+  margin-top: 48px;
 }
 
 .reasons-list-item p {
@@ -452,6 +463,7 @@ a {
   font-size: 30px;
   line-height: 24px;
   margin-top: 58px;
+  margin-bottom: 28px;
 }
 
 .hotel-search p {
@@ -460,7 +472,8 @@ a {
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 48px;
+  margin-bottom: 43px;
+  margin-top: 33px;
 }
 
 .button-hotel-search {
@@ -489,6 +502,188 @@ a {
   outline: none !important;
 }
 
+/* form */
+
+.search-modal {
+  position: relative;
+}
+
+.modal-open {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--basic-white);
+  box-shadow: 0px 7px 15px var(--basic-shadow);
+  padding: 55px;
+  width: 458px;
+}
+
+.modal-close {
+  display: none;
+}
+
+.modal-label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 31px;
+  padding-bottom: -1px;
+  margin-top: 1px;
+}
+
+.modal-label-text {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  width: 112px;
+  text-align: left;
+  order: -1;
+  padding-bottom: 3px;
+}
+
+.label-text-children {
+  width: 65px;
+  margin-left: 54px;
+}
+
+.modal-field {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  height: 37px;
+  background-color: var(--basic-background-color);
+  border: none;
+  width: 346px;
+  box-sizing: border-box;
+  padding: 6px 20px 9px 13px;
+}
+
+
+.modal-field:hover {
+  background-color: var(--light-add-grey);
+}
+
+.modal-field:focus {
+  border: 2px solid var(--border-grey);
+  background-color: var(--basic-white);
+  outline: none;
+}
+
+.modal-icon {
+  position: absolute;
+  right: 10px;
+}
+
+.modal-icon:hover {
+  fill: var(--basic-black);
+}
+
+.modal-icon:active {
+  fill: var(--basic-blue);
+}
+
+.modal-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  margin-bottom: 52px;
+}
+
+.modal-wrapper-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-number-input {
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 26px;
+  line-height: 26px;
+  text-transform: uppercase;
+  max-width: 38px;
+  min-height: 38px;
+  padding: 0;
+  background-color: var(--basic-background-color);
+  border: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.modal-number-input:hover {
+  background-color: var(--light-add-grey);
+}
+
+.modal-number-input:focus {
+  background-color: var(--basic-white);
+  border: 2px solid var(--border-grey);
+  outline: none;
+}
+
+input::-webkit-input-placeholder {
+  font-weight: 700;
+  line-height: 26px;
+  text-transform: uppercase;
+  color: var(--basic-black);
+}
+
+.button-modal {
+  border: none;
+  outline: none;
+  background-color: var(--basic-background-color);
+  width: 38px;
+  height: 38px;
+  padding: 0;
+}
+
+.button-modal:hover path,
+.button-modal:hover path {
+  fill: var(--basic-black);
+}
+
+.button-modal:active path,
+.button-modal:active path {
+  fill: var(--basic-blue);
+}
+
+.button-minus {
+  margin: 17px auto;
+}
+
+.button-plus {
+  margin: 13px auto;
+}
+
+.button-find-hotel {
+  width: 458px;
+  height: 58px;
+  font-family: "PT Sans";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  text-transform: uppercase;
+  background-color: var(--basic-blue);
+  color: var(--basic-white);
+  border: none;
+}
+
+.button-find-hotel:hover {
+  background-color: var(--darker-blue);
+}
+
+.button-find-hotel:active {
+  background-color: var(--dark-blue);
+  color: var(--transparent-white);
+  outline: none;
+}
+
 /* Map */
 
 .map {
@@ -510,7 +705,6 @@ a {
 .filter fieldset {
   padding: 0;
   margin: 0;
-  margin-bottom: 30px;
   border: none;
 }
 
@@ -681,6 +875,11 @@ a {
   transform: scale(1.3);
 }
 
+.range-controls .toggle:focus,
+.range-controls .toggle:active {
+  outline-style: none;
+}
+
 .range-controls .toggle-min {
   left: 0;
 }
@@ -689,7 +888,7 @@ a {
   left: 250px;
 }
 
-.show {
+.button-show {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: normal;
@@ -708,12 +907,10 @@ a {
   top: 55px;
 }
 
-.show:hover {
+.button-show:hover {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
-
-/* Стили для фильтра будут после того, как будет готова форма фильтра */
 
 /* Sorting */
 
@@ -721,7 +918,7 @@ a {
   text-transform: uppercase;
   color: var(--basic-black);
   display: grid;
-  grid-template-columns: 127px 130px 1fr 1fr; /* Последняя колонка - для иконок потом */
+  grid-template-columns: 127px 130px 1fr 1fr;
   margin-left: 73px;
   }
 
@@ -776,12 +973,12 @@ a {
 }
 
 .sorting-list-item a:focus {
-  color: var(--basic-black);
+  color: var(--basic-blue);
   border-bottom: none;
 }
 
 .sorting-list-item a:active {
-  color: var(--basic-blue);
+  color: var(--basic-black);
   border-bottom: none;
 }
 
@@ -798,6 +995,10 @@ a {
 }
 
 .sorting-icons-list path:active {
+  fill: var(--basic-blue);
+}
+
+.sorting-icons-list path:focus {
   fill: var(--basic-blue);
 }
 
@@ -834,16 +1035,27 @@ a {
   margin-bottom: -8px;
 }
 
+.result-hotel-name {
+  color: var(--basic-black);
+}
+
+.result-hotel-name:hover {
+  color: var(--basic-blue);
+}
+
+.result-hotel-name:active {
+  color: var(--transparent-black);
+}
+
 .hotel-price {
-  width: 180px;
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: var(--dark-grey);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 116px 1fr;
 }
 
 .result-container {
@@ -977,6 +1189,14 @@ a {
   text-transform: uppercase;
 }
 
+.main-page-footer {
+  margin-top: -120px;
+}
+
+.contact {
+  margin-left: 72px;
+}
+
 .contact p {
   font-family: "PT Sans Bold";
   font-style: normal;
@@ -985,10 +1205,16 @@ a {
   line-height: 26px;
   text-align: center;
   color: var(--basic-black);
+  margin-bottom: 11px;
+  margin-top: -2px;
 }
 
 .contact a {
   color: var(--basic-black);
+}
+
+.social-network {
+  padding: 0px;
 }
 
 .social-network-list a {
@@ -1003,7 +1229,8 @@ a {
 }
 
 .social-network-list li {
-  margin: 0.5em;
+  margin: 0.2em;
+  padding-bottom: 2px;
 }
 
 .social-network {
@@ -1034,6 +1261,8 @@ a {
 
 .designed-by {
   justify-self: center;
+  margin-right: 76px;
+  margin-top: 3px;
 }
 
 .designed-by p {
@@ -1048,7 +1277,7 @@ a {
   display: inline-block;
   vertical-align: middle;
   padding-left: 4px;
-  padding-bottom: 7px;
+  padding-bottom: 0px;
   color: inherit;
 }
 
@@ -1060,7 +1289,4 @@ a {
   fill: var(--logo-grey);
 }
 
-.image-container {
-  height: 256px;
-}
 
