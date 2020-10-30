@@ -106,6 +106,10 @@ a {
   box-shadow: var(--basic-shadow);
 }
 
+.main-navigation {
+  position: relative;
+}
+
 .main-header-logo {
   position: absolute;
   left: 50%;
@@ -642,12 +646,12 @@ input::-webkit-input-placeholder {
   padding: 0;
 }
 
-.button-modal:hover path,
+.button-modal:hover svg,
 .button-modal:hover path {
   fill: var(--basic-black);
 }
 
-.button-modal:active path,
+.button-modal:active svg,
 .button-modal:active path {
   fill: var(--basic-blue);
 }
