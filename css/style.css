@@ -118,6 +118,7 @@ a {
   z-index: 1;
 }
 
+
 .site-menu {
   list-style: none;
   margin: 0;
@@ -455,6 +456,7 @@ a {
 /* Hotel search */
 
 .hotel-search {
+  position: relative;
   align-items: center;
   text-align: center;
   text-transform: uppercase;
@@ -493,6 +495,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   border-color: transparent;
+  position: relative;
 }
 
 .button-hotel-search:hover {
@@ -508,22 +511,16 @@ a {
 
 /* form */
 
-.search-modal {
-  position: relative;
-}
-
-.modal-open {
+.modal-container {
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  z-index: 1;
   background-color: var(--basic-white);
   box-shadow: 0px 7px 15px var(--basic-shadow);
   padding: 55px;
   width: 458px;
-}
-
-.modal-close {
-  display: none;
 }
 
 .modal-label {
@@ -686,6 +683,40 @@ input::-webkit-input-placeholder {
   background-color: var(--dark-blue);
   color: var(--transparent-white);
   outline: none;
+}
+
+.modal-open {
+  display: block;
+  animation: fadeIn 0.6s;
+}
+
+.modal-close {
+  display: none;
+}
+
+.error {
+  animation: shake 0.6s;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes shake {
+  0%,
+  100% {transform: translateX(0);}
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {transform: translateX(-10px);}
+
+  20%,
+  40%,
+  60%,
+  80% {transform: translateX(10px);}
 }
 
 /* Map */
@@ -1050,7 +1081,7 @@ input::-webkit-input-placeholder {
   color: var(--basic-black);
 }
 
-.result-hotel-name:hover {
+.result-hotel-name:hover, .result-hotel-name:focus {
   color: var(--basic-blue);
 }
 

@@ -107,9 +107,8 @@
       <section class="hotel-search">
         <h2>Заинтересовались?</h2>
         <p>Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в седоне</p>
-        <div class="search-modal">
           <input class="button-hotel-search" type="button" value="Поиск гостиницы в Седоне"><!--Позднее добавим форму, появляющуюся по клику на эту кнопку-->
-          <form class="modal-open" action="https://echo.htmlacademy.ru" method="post">
+          <form class="modal-container" action="https://echo.htmlacademy.ru" method="post">
             <label class="modal-label">
                 <span class="modal-label-text">Дата заезда: </span>
                 <input class="modal-field" name="date-arrival" placeholder="24 апреля 2017" type="text" pattern="^[А-Яа-яЁё0-9\s]+$" maxlength="16" required>
@@ -161,7 +160,6 @@
             </div>
             <button class="button-find-hotel" type="submit" aria-label="Найти гостиницу по выбраннам критериям">Найти</button>
           </form>
-        </div>
       </section>
 
       <section class="map"> <!--Отдельный блок для карты - пока изображение-->
@@ -218,5 +216,6 @@
         </p>
       </section>
     </footer>
+    <script src="js/search.js"></script>
   </body>
 </html>
