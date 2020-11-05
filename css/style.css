@@ -611,7 +611,6 @@ a {
   font-weight: 700;
   font-size: 14px;
   line-height: 26px;
-  line-height: 26px;
   text-transform: uppercase;
   max-width: 38px;
   min-height: 38px;
@@ -697,52 +696,6 @@ input::-webkit-input-placeholder {
 .error {
   -webkit-animation: shake 0.6s;
           animation: shake 0.6s;
-}
-
-@-webkit-keyframes slide {
-  0% { transform: translateY(-110px); opacity: 0.3; }
-  70% { transform: translateY(20px); opacity: .8; }
-  90% { transform: translateY(10px); opacity: .9; }
-  100% { transform: translateY(0px); opacity: 1; }
-}
-
-@keyframes slide {
-  0% { transform: translateY(-110px); opacity: 0.3; }
-  70% { transform: translateY(20px); opacity: .8; }
-  90% { transform: translateY(10px); opacity: .9; }
-  100% { transform: translateY(0px); opacity: 1; }
-}
-
-@-webkit-keyframes shake {
-  0%,
-  100% {transform: translateX(0);}
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {transform: translateX(-10px);}
-
-  20%,
-  40%,
-  60%,
-  80% {transform: translateX(10px);}
-}
-
-@keyframes shake {
-  0%,
-  100% {transform: translateX(0);}
-
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {transform: translateX(-10px);}
-
-  20%,
-  40%,
-  60%,
-  80% {transform: translateX(10px);}
 }
 
 /* Map */
@@ -1353,4 +1306,50 @@ input::-webkit-input-placeholder {
   fill: var(--logo-grey);
 }
 
+/* keyframes */
 
+@-webkit-keyframes slide {
+  0% { transform: translateY(-110px); opacity: 0.3; }
+  70% { transform: translateY(20px); opacity: .8; }
+  90% { transform: translateY(10px); opacity: .9; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+@keyframes slide {
+  0% { transform: translateY(-110px); opacity: 0.3; }
+  70% { transform: translateY(20px); opacity: .8; }
+  90% { transform: translateY(10px); opacity: .9; }
+  100% { transform: translateY(0px); opacity: 1; }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {transform: translateX(0);}
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {transform: translateX(-10px);}
+
+  20%,
+  40%,
+  60%,
+  80% {transform: translateX(10px);}
+}
+
+@keyframes shake {
+  0%,
+  100% {transform: translateX(0);}
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {transform: translateX(-10px);}
+
+  20%,
+  40%,
+  60%,
+  80% {transform: translateX(10px);}
+}
