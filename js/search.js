@@ -22,6 +22,8 @@ try {
   isStorageSupport = false;
 }
 
+searchForm.classList.add("modal-close");
+
 buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (searchForm.classList.contains("modal-close")){
