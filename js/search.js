@@ -24,16 +24,13 @@ try {
 
 buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (searchForm.classList.contains("modal-container")){
-    searchForm.classList.remove("modal-container");
-    searchForm.classList.remove("modal-open");
-    searchForm.classList.remove("error");
-    searchForm.classList.add("modal-close");
-  } else {
+  if (searchForm.classList.contains("modal-close")){
     searchForm.classList.remove("modal-close");
-    searchForm.classList.add("modal-open");
-    searchForm.classList.add("modal-container")
     arrivalDate.focus();
+    // console.log("Open form"); проверка работы формы
+  } else {
+    searchForm.classList.add("modal-close");
+    // console.log("CLose form"); проверка работы формы
   }
 });
 
@@ -53,9 +50,8 @@ buttonFind.addEventListener("click", function (evt) {
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (searchForm.classList.contains("modal-container")) {
+    if (!searchForm.classList.contains("modal-close")) {
       evt.preventDefault();
-      searchForm.classList.remove("modal-container");
       searchForm.classList.remove("error");
       searchForm.classList.add("modal-close");
     }

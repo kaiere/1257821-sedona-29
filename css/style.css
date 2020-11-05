@@ -506,12 +506,14 @@ a {
   background-color: var(--dark-brown);
   color: var(--transparent-white);
   border: 0;
-  outline: none !important;
+  outline: none;
 }
 
 /* form */
 
 .modal-container {
+  display: block;
+  animation: slide 0.6s;
   position: absolute;
   left: 0;
   right: 0;
@@ -685,11 +687,6 @@ input::-webkit-input-placeholder {
   outline: none;
 }
 
-.modal-open {
-  display: block;
-  animation: fadeIn 0.6s;
-}
-
 .modal-close {
   display: none;
 }
@@ -698,9 +695,11 @@ input::-webkit-input-placeholder {
   animation: shake 0.6s;
 }
 
-@keyframes fadeIn {
-  from {opacity: 0;}
-  to {opacity: 1;}
+@keyframes slide {
+  0% { transform: translateY(-200px); opacity: 0.3; }
+    70% { transform: translateY(30px); opacity: .8; }
+    90% { transform: translateY(10px); }
+    100% { transform: translateY(0px); opacity: 1; }
 }
 
 @keyframes shake {
@@ -1149,7 +1148,7 @@ input::-webkit-input-placeholder {
   color: var(--transparent-white);
   border-color: transparent;
   border: 0;
-  outline: none !important;
+  outline: none;
 }
 
 .button-book {
@@ -1175,7 +1174,7 @@ input::-webkit-input-placeholder {
   background-color: var(--dark-brown);
   color: var(--transparent-white);
   border: 0;
-  outline: none !important;
+  outline: none;
 }
 
 /* .stars-rating-first {
