@@ -26,6 +26,7 @@ buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
   if (searchForm.classList.contains("modal-close")){
     searchForm.classList.remove("modal-close");
+    searchForm.classList.remove("error");
     arrivalDate.focus();
     // console.log("Open form"); проверка работы формы
   } else {
