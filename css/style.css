@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 2 version,not dead,not ie <= 11
+*/
+
 /* Fonts */
 
 @font-face {
@@ -87,6 +94,7 @@ a {
 .page-body {
   min-height: 100%;
   display: grid;
+  grid-template-rows: -webkit-min-content 1fr -webkit-min-content;
   grid-template-rows: min-content 1fr min-content;
   align-content: start;
   box-shadow: 0px 5px 15px var(--basic-shadow);
@@ -127,20 +135,20 @@ a {
   justify-content: space-between;
 }
 
-.site-menu li:nth-child(1) {
+.site-menu-item:nth-child(1) {
   padding-left: 6px;
 }
 
-.site-menu li:nth-child(2) {
+.site-menu-item:nth-child(2) {
   padding-right: 10px;
 }
 
-.site-menu li:nth-child(3) {
+.site-menu-item:nth-child(3) {
   margin-left: 255px;
   padding-left: 18px;
 }
 
-.site-menu li {
+.site-menu-item {
   width: 20%;
   padding-left: 3px;
   padding-top: 15px;
@@ -149,7 +157,7 @@ a {
   align-items: center;
 }
 
-.site-menu a {
+.site-menu-link {
   color: var(--basic-black);
   font-family: "PT Sans Bold";
   font-style: normal;
@@ -159,15 +167,15 @@ a {
   text-transform: uppercase;
 }
 
-.site-menu a:hover {
+.site-menu-link:hover {
   color: var(--basic-blue);
 }
 
-.site-menu a:focus {
+.site-menu-link:focus {
   color: var(--basic-brown);
 }
 
-.site-menu a:active {
+.site-menu-link:active {
   color: var(--transparent-black);
 }
 
@@ -212,7 +220,7 @@ a {
   color: var(--basic-black);
 }
 
-.about-mini h3 {
+.about-mini-header {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
@@ -222,7 +230,7 @@ a {
   margin-bottom: 44px
 }
 
-.about-mini p {
+.about-mini-paragraph {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
@@ -231,11 +239,12 @@ a {
   margin-bottom: 51px;
 }
 
-/* first reason - это ты */
+/* first reason */
 
 .first-reason {
   background-color: var(--basic-blue);
   display: grid;
+  grid-template-columns: -webkit-min-content -webkit-min-content;
   grid-template-columns: min-content min-content;
   width: 1200px;
   height: 256px;
@@ -253,7 +262,7 @@ a {
     color: var(--basic-white);
 }
 
-.first-reason h3 {
+.first-reason-header {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
@@ -262,7 +271,7 @@ a {
   padding-bottom: 7px;
 }
 
-.first-reason p {
+.reason-number, .reason-description {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
@@ -309,7 +318,7 @@ a {
   padding-top: 147px;
 }
 
-.features-list-item h3 {
+.features-header {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
@@ -357,7 +366,7 @@ a {
   margin-top: -5px;
 }
 
-.features-list-item p {
+.features-paragraph {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
@@ -368,11 +377,12 @@ a {
   margin-top: 25px;
 }
 
-/* a second reason - все твои мечты */
+/* second reason */
 
 .second-reason {
   background-color: var(--basic-blue);
   display: grid;
+  grid-template-columns: -webkit-min-content -webkit-min-content;
   grid-template-columns: min-content min-content;
   width: 1200px;
   height: 256px;
@@ -390,22 +400,13 @@ a {
   color: var(--basic-white);
 }
 
-.second-reason h3 {
+.second-reason-header {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   padding-bottom: 7px;
-}
-
-.second-reason p {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 21px;
-  margin-top: -3px;
 }
 
 /* last reasons */
@@ -429,11 +430,11 @@ a {
   padding: 0;
 }
 
-.reasons-list-item .description {
+.last-reasons-description {
   margin-bottom: 54px;
 }
 
-.reasons-list-item h3 {
+.last-reasons-header {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
@@ -443,7 +444,7 @@ a {
   margin-top: 48px;
 }
 
-.reasons-list-item p {
+.last-reasons-description, .last-reasons-number {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
@@ -462,7 +463,7 @@ a {
   text-transform: uppercase;
 }
 
-.hotel-search h2 {
+.hotels-search-header {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
@@ -472,7 +473,7 @@ a {
   margin-bottom: 28px;
 }
 
-.hotel-search p {
+.hotels-search-paragraph {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
@@ -514,7 +515,8 @@ a {
 
 .modal-container {
   display: block;
-  animation: slide 0.6s;
+  -webkit-animation: slide 0.6s;
+          animation: slide 0.6s;
   position: absolute;
   left: 0;
   right: 0;
@@ -693,7 +695,15 @@ input::-webkit-input-placeholder {
 }
 
 .error {
-  animation: shake 0.6s;
+  -webkit-animation: shake 0.6s;
+          animation: shake 0.6s;
+}
+
+@-webkit-keyframes slide {
+  0% { transform: translateY(-110px); opacity: 0.3; }
+  70% { transform: translateY(20px); opacity: .8; }
+  90% { transform: translateY(10px); opacity: .9; }
+  100% { transform: translateY(0px); opacity: 1; }
 }
 
 @keyframes slide {
@@ -701,6 +711,22 @@ input::-webkit-input-placeholder {
   70% { transform: translateY(20px); opacity: .8; }
   90% { transform: translateY(10px); opacity: .9; }
   100% { transform: translateY(0px); opacity: 1; }
+}
+
+@-webkit-keyframes shake {
+  0%,
+  100% {transform: translateX(0);}
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {transform: translateX(-10px);}
+
+  20%,
+  40%,
+  60%,
+  80% {transform: translateX(10px);}
 }
 
 @keyframes shake {
@@ -731,19 +757,20 @@ input::-webkit-input-placeholder {
 
 .filter {
   display: grid;
+  grid-template-columns: -webkit-min-content -webkit-min-content 50%;
   grid-template-columns: min-content min-content 50%;
   width: 1200px;
   height: 217px;
   background-image: url('../img/background-filter.jpg');
 }
 
-.filter fieldset {
+.filter-fieldset {
   padding: 0;
   margin: 0;
   border: none;
 }
 
-.filter legend {
+.filter-legend {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: bold;
@@ -754,7 +781,7 @@ input::-webkit-input-placeholder {
   padding-top: 1px;
 }
 
-.hotels-infrastructure-filter ul {
+.infrastructure-list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -772,12 +799,12 @@ input::-webkit-input-placeholder {
   padding-top: 25px;
 }
 
-.hotels-infrastructure-filter li {
+.infrastructure-list-item {
   padding-bottom: 23px;
   padding-left: 41px;
 }
 
-.hotels-accomodation-filter ul {
+.accommodation-list {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -789,13 +816,13 @@ input::-webkit-input-placeholder {
   color: var(--basic-white);
 }
 
-.hotels-accomodation-filter{
+.hotels-accommodation-filter {
   width: 180px;
   padding-left: 75px;
   padding-top: 25px;
 }
 
-.hotels-accomodation-filter li {
+.accommodation-list-item {
   padding-bottom: 23px;
   padding-left: 41px;
 }
@@ -820,7 +847,7 @@ input::-webkit-input-placeholder {
   background-image: url('../img/checkbox-on.svg');
 }
 
-.filter-option label {
+.filter-label {
   position: relative;
   display: block;
   cursor: pointer;
@@ -832,7 +859,7 @@ input::-webkit-input-placeholder {
   padding-top: 25px;
 }
 
-.hotels-price-filter legend {
+.price-legend {
   padding-bottom: 11px;
 }
 
@@ -967,24 +994,21 @@ input::-webkit-input-placeholder {
   justify-self: start;
   margin: 0;
   padding: 31px 0 37px;
-}
-
-.sorting h2 {
-  font-family: "PT Sans Bold";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 21px;
-  line-height: 26px;
-  margin-top: 29px;
-}
-
-.sorting p {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
   margin-left: 37px;
+}
+
+.sorting-header {
+  font-family: "PT Sans Bold";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 26px;
+  margin-top: 29px;
 }
 
 .sorting-list {
@@ -1003,22 +1027,22 @@ input::-webkit-input-placeholder {
   padding-right: 21px;
 }
 
-.sorting-list-item a {
+.sorting-link {
   color: var(--transparent-black);
   border-bottom: 1px dashed var(--basic-blue);
 }
 
-.sorting-list-item a:hover {
+.sorting-link:hover {
   color: var(--basic-blue);
   border-bottom: 1px dashed var(--basic-blue);
 }
 
-.sorting-list-item a:focus {
+.sorting-link:focus {
   color: var(--basic-blue);
   border-bottom: none;
 }
 
-.sorting-list-item a:active {
+.sorting-link:active {
   color: var(--basic-black);
   border-bottom: none;
 }
@@ -1067,7 +1091,7 @@ input::-webkit-input-placeholder {
   border-bottom: 1px solid var(--border-grey);
 }
 
-.results-list h3 {
+.results-header {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
@@ -1114,7 +1138,7 @@ input::-webkit-input-placeholder {
   border-top: 1px solid var(--border-grey);
 }
 
-.results-list-item img {
+.hotel-image {
   margin: 30px 0px 30px 0px;
 }
 
@@ -1215,7 +1239,7 @@ input::-webkit-input-placeholder {
   margin-left: 8px;
 }
 
-.rating-hotels p {
+.rating-paragraph {
   margin-top: 3px;
   color: var(--rating-text-grey);
 }
@@ -1241,7 +1265,7 @@ input::-webkit-input-placeholder {
   margin-left: 72px;
 }
 
-.contact p {
+.contact-paragraph {
   font-family: "PT Sans Bold";
   font-style: normal;
   font-weight: 700;
@@ -1253,16 +1277,12 @@ input::-webkit-input-placeholder {
   margin-top: -2px;
 }
 
-.contact a {
+.telephone {
   color: var(--basic-black);
 }
 
 .social-network {
   padding: 0px;
-}
-
-.social-network-list a {
-  color: var(--basic-black);
 }
 
 .social-network-list {
@@ -1272,7 +1292,7 @@ input::-webkit-input-placeholder {
   padding: 0;
 }
 
-.social-network-list li {
+.social-network-list-item {
   margin: 0.2em;
   padding-bottom: 2px;
 }
@@ -1309,7 +1329,7 @@ input::-webkit-input-placeholder {
   margin-top: 3px;
 }
 
-.designed-by p {
+.designed-by-paragraph {
   font-family: "PT Sans";
   font-style: normal;
   font-weight: 400;

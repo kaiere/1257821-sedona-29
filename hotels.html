@@ -5,7 +5,7 @@
     <title>HTML Academy: Седона</title>
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body class="page-body container">
 
@@ -15,10 +15,10 @@
           <img src="img/sedona-logo.svg" width="138" height="70" alt="Логотип города Седона">
         </a>
         <ul class="site-menu">
-          <li class="site-menu-item"><a href="#">Информация</a></li>
-          <li class="site-menu-item"><a href="#">Фото и видео</a></li>
-          <li class="site-menu-item"><a href="#">Карта штата</a></li>
-          <li class="site-menu-item"><a href="hotels.html">Гостиницы</a></li>
+          <li class="site-menu-item"><a class="site-menu-link" href="#">Информация</a></li>
+          <li class="site-menu-item"><a class="site-menu-link" href="#">Фото и видео</a></li>
+          <li class="site-menu-item"><a class="site-menu-link" href="#">Карта штата</a></li>
+          <li class="site-menu-item"><a class="site-menu-link" href="hotels.html">Гостиницы</a></li>
         </ul>
       </nav>
     </header>
@@ -28,46 +28,46 @@
         <h1 class="hidden-title">Поиск гостиницы в городе Седона</h1>
         <h2 class="hidden-title">Фильтр для поиска</h2>
         <form class="hotels-infrastructure-filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Инфраструктура:</legend>
+          <fieldset class="filter-fieldset">
+            <legend class="filter-legend">Инфраструктура:</legend>
             <ul class="infrastructure-list">
               <li class="filter-option infrastructure-list-item">
                 <input class="hidden-title filter-input-checkbox" type="checkbox" name="pool" id="filter-pool" checked>
-                <label for="filter-pool">бассейн</label>
+                <label class="filter-label" for="filter-pool">бассейн</label>
               </li>
               <li class="filter-option infrastructure-list-item">
                 <input class="hidden-title filter-input-checkbox" type="checkbox" name="parking" id="filter-parking">
-                <label for="filter-parking">парковка</label>
+                <label class="filter-label" for="filter-parking">парковка</label>
               </li>
               <li class="filter-option infrastructure-list-item">
                 <input class="hidden-title filter-input-checkbox" type="checkbox" name="wi-fi" id="filter-wi-fi">
-                <label for="filter-wi-fi">wi-fi</label>
+                <label class="filter-label" for="filter-wi-fi">wi-fi</label>
               </li>
             </ul>
           </fieldset>
         </form>
-        <form class="hotels-accomodation-filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>тип жилья:</legend>
-            <ul class="accomodation-list">
-              <li class="filter-option accomodation-list-item">
+        <form class="hotels-accommodation-filter" method="get" action="https://echo.htmlacademy.ru">
+          <fieldset class="filter-fieldset">
+            <legend class="filter-legend">тип жилья:</legend>
+            <ul class="accommodation-list">
+              <li class="filter-option accommodation-list-item">
                 <input class="hidden-title filter-input-checkbox" type="checkbox" name="hotel" id="filter-hotel" checked>
-                <label for="filter-hotel">гостиница</label>
+                <label class="filter-label" for="filter-hotel">гостиница</label>
               </li>
-              <li class="filter-option accomodation-list-item">
+              <li class="filter-option accommodation-list-item">
                 <input class="hidden-title filter-input-checkbox" type="checkbox" name="motel" id="filter-motel" checked>
-                <label for="filter-motel">мотель</label>
+                <label class="filter-label" for="filter-motel">мотель</label>
               </li>
-              <li class="filter-option accomodation-list-item">
+              <li class="filter-option accommodation-list-item">
                 <input class="hidden-title filter-input-checkbox" type="checkbox" name="apartment" id="filter-apartment" checked>
-                <label for="filter-apartment">апартаменты</label>
+                <label class="filter-label" for="filter-apartment">апартаменты</label>
               </li>
             </ul>
           </fieldset>
         </form>
         <form class="hotels-price-filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>СТОИМОСТЬ В СУТКИ (Р):</legend>
+          <fieldset class="filter-fieldset">
+            <legend class="filter-legend price-legend">СТОИМОСТЬ В СУТКИ (Р):</legend>
             <table class="hotels-price-filter-inputs-wrapper">
               <tbody><tr>
                 <td class="hotels-price-filter-column">
@@ -91,12 +91,12 @@
       </section>
 
       <section class="sorting">
-        <h2>Найдено: 3</h2>
+        <h2 class="sorting-header">Найдено: 3</h2>
         <p class="sorting-group">Сортировка:</p>
         <ul class="sorting-list">
-          <li class="sorting-list-item"><a href="#">По цене</a></li>
-          <li class="sorting-list-item"><a href="#">По типу</a></li>
-          <li class="sorting-list-item"><a href="#">По рейтингу</a></li>
+          <li class="sorting-list-item"><a class="sorting-link" href="#">По цене</a></li>
+          <li class="sorting-list-item"><a class="sorting-link" href="#">По типу</a></li>
+          <li class="sorting-list-item"><a class="sorting-link" href="#">По рейтингу</a></li>
         </ul>
         <ul class="sorting-icons-list">
           <li class="sorting-icons-item">
@@ -112,9 +112,9 @@
         <h2 class="hidden-title">Список отелей</h2>
         <ul class="results-list">
           <li class="results-list-item">
-            <img src="img/amara-resort.jpg" width="135" height="90" alt="Фото отеля">
+            <img class="hotel-image" src="img/amara-resort.jpg" width="135" height="90" alt="Фото отеля">
             <div class="result-container">
-              <h3><a class="result-hotel-name" href="#">Amara Resort & Spa</a></h3>
+              <h3 class="results-header"><a class="result-hotel-name" href="#">Amara Resort & Spa</a></h3>
               <div class="hotel-price">
                 <p>Гостиница</p>
                 <p>от 4000 Р.</p>
@@ -132,14 +132,14 @@
                 <span class="hidden-title">Гостиница 5 звезд</span>
               </div>
               <div class="rating-hotels">
-                <p>Рейтинг: 8,5</p>
+                <p class="rating-paragraph">Рейтинг: 8,5</p>
               </div>
             </div>
           </li>
           <li class="results-list-item">
-            <img src="img/desert-quail.jpg" width="135" height="90" alt="Фото отеля">
+            <img class="hotel-image" src="img/desert-quail.jpg" width="135" height="90" alt="Фото отеля">
             <div class="result-container">
-              <h3><a class="result-hotel-name" href="#">Desert Quail Inn</a></h3>
+              <h3 class="results-header"><a class="result-hotel-name" href="#">Desert Quail Inn</a></h3>
               <div class="hotel-price">
                 <p>Мотель</p>
                 <p>от 3000 Р.</p>
@@ -155,14 +155,14 @@
                 <span class="hidden-title">Гостиница 3 звезды</span>
               </div>
               <div class="rating-hotels">
-                <p>Рейтинг: 8,9</p>
+                <p class="rating-paragraph">Рейтинг: 8,9</p>
               </div>
            </div>
           </li>
           <li class="results-list-item">
-            <img src="img/poco-diablo.jpg" width="135" height="90" alt="Фото отеля">
+            <img class="hotel-image" src="img/poco-diablo.jpg" width="135" height="90" alt="Фото отеля">
             <div class="result-container">
-              <h3><a class="result-hotel-name" href="#">Villas at Poco Diablo</a></h3>
+              <h3 class="results-header"><a class="result-hotel-name" href="#">Villas at Poco Diablo</a></h3>
               <div class="hotel-price">
                 <p>Апартаменты</p>
                 <p>от 2000 Р.</p>
@@ -177,7 +177,7 @@
                 <span class="hidden-title">Гостиница 2 звезды</span>
               </div>
               <div class="rating-hotels">
-                <p>Рейтинг: 9,2</p>
+                <p class="rating-paragraph">Рейтинг: 9,2</p>
               </div>
            </div>
           </li>
@@ -188,28 +188,28 @@
     <footer class="main-footer">
       <section class="contact">
         <h2 class="hidden-title">Контакты</h2>
-        <p>#visitSEDONA</p>
-        <p>ТЕЛ: <a href="tel:+00000000">+7(495) 666-01-66</a></p>
+        <p class="contact-paragraph">#visitSEDONA</p>
+        <p class="contact-paragraph">ТЕЛ: <a class="telephone" href="tel:+00000000">+7(495) 666-01-66</a></p>
       </section>
 
       <section class="social-network">
         <h2 class="hidden-title">Социальные сети</h2>
         <ul class="social-network-list">
-          <li>
+          <li class="social-network-list-item">
             <a class="social-button" href="#" aria-label="Вконтакте">
               <svg aria-hidden="true" focusable="false" width="17" height="17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10.95 1.14a3.1 3.1 0 013.58 1.18c.67-.23 1.33-.48 2-.7a2.34 2.34 0 01-.85 1.76c.69.17 1.3-.49 1.3-.49-.16 1-1 1.79-1.56 2.03C15.2 11.67 12.25 16.13 5.34 16H4.9c-.41 0-4.17-.46-4.9-1.89 2.27.2 3.9-.42 4.7-1.18-.97-.3-2.69-.47-2.99-2.95.35.11.57.23 1.2.12C1.7 9.25.36 8.53.44 6.33a1.9 1.9 0 001.34.47c-.7-.24-1.97-3.36-.9-4.95 1.82 1.85 3.74 3.6 7.16 3.77.2-2.29 1.13-3.83 2.9-4.48z" fill="#fff"></path>
             </svg>
             </a>
           </li>
-          <li>
+          <li class="social-network-list-item">
             <a class="social-button" href="#" aria-label="Фейсбук">
               <svg aria-hidden="true" focusable="false" width="12" height="22" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M12 4V0H8a4 4 0 00-4 4v4H0v4h4v10h4V12h4V8H8V4h4z" fill="#fff"></path>
             </svg>
             </a>
           </li>
-          <li>
+          <li class="social-network-list-item">
             <a class="social-button" href="#" aria-label="Ютуб">
               <svg aria-hidden="true" focusable="false" width="20" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path fill-rule="evenodd" clip-rule="evenodd" d="M3 0h14c1.65 0 3 1.35 3 3v10c0 1.65-1.35 3-3 3H3c-1.65 0-3-1.35-3-3V3c0-1.65 1.35-3 3-3zm3.027 4.002v7.996L15.014 8 6.027 4.002z" fill="#fff"></path>
@@ -221,7 +221,7 @@
 
       <section class="designed-by">
         <h2 class="hidden-title">Вебсайт разработан</h2>
-        <p>
+        <p class="designed-by-paragraph">
           Website by
           <a href="https://htmlacademy.ru/intensive/htmlcss" class="academy-logo" aria-label="HTMLAcademy">
             <svg aria-hidden="true" focusable="false" width="114" height="40" fill="none" xmlns="http://www.w3.org/2000/svg">

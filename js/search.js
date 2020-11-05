@@ -26,14 +26,12 @@ searchForm.classList.add("modal-close");
 
 buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();
-  if (searchForm.classList.contains("modal-close")){
+  if (searchForm.classList.contains("modal-close")) {
     searchForm.classList.remove("modal-close");
     searchForm.classList.remove("error");
     arrivalDate.focus();
-    // console.log("Open form"); проверка работы формы
   } else {
     searchForm.classList.add("modal-close");
-    // console.log("CLose form"); проверка работы формы
   }
 });
 
