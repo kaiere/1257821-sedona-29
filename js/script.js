@@ -5,6 +5,8 @@ const arrivalDate = searchForm.querySelector("[name=date-arrival]");
 const leavingDate = searchForm.querySelector("[name=date-leaving]");
 const adultCount = searchForm.querySelector("[name=adult]");
 const childCount = searchForm.querySelector("[name=child]");
+const mapImage = document.querySelector(".map-image");
+const mapIframe = document.querySelector(".map-iframe");
 
 let isStorageSupport = true;
 let adultsStorage = "";
@@ -23,6 +25,11 @@ try {
 }
 
 searchForm.classList.add("modal-close");
+
+window.onload = function() {
+  mapImage.classList.add("hidden-title");
+  mapIframe.classList.remove("hidden-title");
+}
 
 buttonSearch.addEventListener("click", function (evt) {
   evt.preventDefault();

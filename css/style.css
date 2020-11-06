@@ -56,6 +56,7 @@
   --logo-grey: #BDBBBC;
   --border-grey: #E5E5E5;
   --rating-text-grey: #666666;
+  --background-blue: #bed5e4;
 }
 
 /* Global */
@@ -130,36 +131,35 @@ a {
 .site-menu {
   list-style: none;
   margin: 0;
-  padding: 0;
+  padding: 15px 72px;
   display: flex;
-  justify-content: space-between;
-}
-
-.site-menu-item:nth-child(1) {
-  padding-left: 6px;
-}
-
-.site-menu-item:nth-child(2) {
-  padding-right: 10px;
-}
-
-.site-menu-item:nth-child(3) {
-  margin-left: 255px;
-  padding-left: 18px;
+  flex-wrap: wrap;
 }
 
 .site-menu-item {
-  width: 20%;
-  padding-left: 3px;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  text-align: center;
-  align-items: center;
+  width: 228px;
+}
+
+.site-menu-item:nth-child(4n+1) {
+  text-align: left;
+}
+
+.site-menu-item:nth-child(4n-2) {
+  text-align: left;
+}
+
+.site-menu-item:nth-child(4n-1) {
+  margin-left: auto;
+  text-align: right;
+}
+
+.site-menu-item:nth-child(4n) {
+  text-align: right;
 }
 
 .site-menu-link {
   color: var(--basic-black);
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -167,16 +167,16 @@ a {
   text-transform: uppercase;
 }
 
-.site-menu-link:hover {
+.site-menu-link:hover, .site-menu-link:focus {
   color: var(--basic-blue);
-}
-
-.site-menu-link:focus {
-  color: var(--basic-brown);
 }
 
 .site-menu-link:active {
   color: var(--transparent-black);
+}
+
+.site-menu-link-active {
+  color: var(--basic-brown);
 }
 
 /* Main */
@@ -190,6 +190,7 @@ a {
 
 .main-image {
   background-image: url(../img/main-background.jpg);
+  background-color: var(--background-blue);
   padding-bottom: 72px;
   text-align: center;
   display: block;
@@ -221,7 +222,7 @@ a {
 }
 
 .about-mini-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
@@ -231,7 +232,7 @@ a {
 }
 
 .about-mini-paragraph {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -244,52 +245,60 @@ a {
 .first-reason {
   background-color: var(--basic-blue);
   display: grid;
-  grid-template-columns: -webkit-min-content -webkit-min-content;
-  grid-template-columns: min-content min-content;
-  width: 1200px;
-  height: 256px;
+  grid-template-columns: -webkit-min-content 1fr;
+  grid-template-columns: min-content 1fr;
 }
 
-.first-reason .text-container {
+.first-reason .text-container, .second-reason .text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 400px;
-    height: 256px;
+    min-height: 256px;
     text-align: center;
     text-transform: uppercase;
     color: var(--basic-white);
+    padding: 20px;
+    padding-bottom: 27px;
+    box-sizing: border-box;
 }
 
 .first-reason-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
-  padding-bottom: 7px;
+  margin: 0;
 }
 
 .reason-number, .reason-description {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  margin-top: -3px;
-}
-
-.paragraph-container {
-  padding-bottom: 11px;
+  margin: 0;
 }
 
 .reason-number {
-  margin-bottom: 27px;
+  margin-top: 25px;
+  margin-bottom: 23px;
 }
 
 .image-container {
-  height: 256px;
+  min-height: 256px;
+  background-position: 50%;
+  background-color: var(--background-blue);
+}
+
+.image-container-town {
+  background-image: url("../img/real-town.jpg");
+}
+
+.image-container-bridge {
+  background-image: url("../img/devils-bridge.jpg");
 }
 
 /* Features */
@@ -303,78 +312,65 @@ a {
 
 .features-list {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  overflow: auto;
-  margin: 3px 0px 2px 0px;
-  padding: 0;
+  margin: 0;
+  padding: 0 50px 82px;
 }
 
 .features-list-item {
-  text-align: center;
-  position: relative;
-  padding-top: 147px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 55px;
 }
 
 .features-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  margin-top: 10px;
+  margin: 0;
+  margin-top: 28px;
+  margin-bottom: 25px;
+}
+
+.features-item-house::before, .features-item-food::before, .features-item-gifts::before {
+  content: '';
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  height: 77px;
 }
 
 .features-item-house::before {
-  content: '';
-  position: absolute;
   background-image: url(../img/icon-house.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 57px;
   width: 75px;
-  height: 72px;
-  transform: translateX(-50%);
 }
 
 .features-item-food::before {
-  content: '';
-  position: absolute;
   background-image: url(../img/icon-food.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 57px;
   width: 75px;
-  height: 70px;
-  transform: translateX(-50%);
-  margin-top: 1px;
 }
 
 .features-item-gifts::before {
-  content: '';
-  position: absolute;
   background-image: url(../img/icon-gift.svg);
-  background-position: center;
-  background-repeat: no-repeat;
-  top: 57px;
   width: 64px;
   height: 77px;
-  transform: translateX(-50%);
-  margin-top: -5px;
 }
 
 .features-paragraph {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: var(--dark-grey);
-  margin-bottom: 80px;
-  margin-top: 25px;
+  margin: 0;
+  margin-bottom: auto;
 }
 
 /* second reason */
@@ -382,31 +378,21 @@ a {
 .second-reason {
   background-color: var(--basic-blue);
   display: grid;
-  grid-template-columns: -webkit-min-content -webkit-min-content;
-  grid-template-columns: min-content min-content;
-  width: 1200px;
-  height: 256px;
+  grid-template-columns: 1fr -webkit-min-content;
+  grid-template-columns: 1fr min-content;
 }
 
 .second-reason .text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 400px;
-  height: 256px;
-  text-align: center;
-  text-transform: uppercase;
-  color: var(--basic-white);
+  padding-bottom: 22px;
 }
 
 .second-reason-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
-  padding-bottom: 7px;
+  margin: 0;
 }
 
 /* last reasons */
@@ -422,36 +408,47 @@ a {
 .reasons-list {
   list-style: none;
   justify-content: space-between;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  align-items: center;
-  overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
-  padding: 0;
+  padding: 0 50px 55px;
 }
 
-.last-reasons-description {
-  margin-bottom: 54px;
+.reasons-list-item {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 48px;
 }
 
 .last-reasons-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 21px;
   color: var(--basic-black);
-  margin-top: 48px;
+  margin: 0;
+  margin-bottom: 25px;
 }
 
 .last-reasons-description, .last-reasons-number {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
   color: var(--dark-grey);
-  margin-top: 24px;
+  margin: 0;
+}
+
+.last-reasons-number {
+  margin-bottom: 23px;
+}
+
+.last-reasons-description {
+  margin: 0 10px auto;
 }
 
 /* Hotel search */
@@ -464,7 +461,7 @@ a {
 }
 
 .hotels-search-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 30px;
@@ -474,12 +471,12 @@ a {
 }
 
 .hotels-search-paragraph {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 24px;
-  margin-bottom: 43px;
+  margin-bottom: 42px;
   margin-top: 33px;
 }
 
@@ -487,7 +484,7 @@ a {
   width: 568px;
   height: 86px;
   background-color: var(--basic-brown);
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
@@ -532,13 +529,11 @@ a {
   position: relative;
   display: flex;
   align-items: center;
-  margin-bottom: 31px;
-  padding-bottom: -1px;
-  margin-top: 1px;
+  margin-bottom: 30px;
 }
 
 .modal-label-text {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -546,7 +541,6 @@ a {
   width: 112px;
   text-align: left;
   order: -1;
-  padding-bottom: 3px;
 }
 
 .label-text-children {
@@ -555,28 +549,44 @@ a {
 }
 
 .modal-field {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
-  line-height: 26px;
-  height: 37px;
+  line-height: 18px;
+  text-transform: uppercase;
   background-color: var(--basic-background-color);
-  border: none;
   width: 346px;
   box-sizing: border-box;
-  padding: 6px 20px 9px 13px;
+  padding: 8px 11px;
+  border: 2px solid var(--basic-background-color);
 }
 
 
 .modal-field:hover {
   background-color: var(--light-add-grey);
+  border: 2px solid var(--light-add-grey);
 }
 
 .modal-field:focus {
+  box-sizing: border-box;
   border: 2px solid var(--border-grey);
   background-color: var(--basic-white);
   outline: none;
+}
+
+.modal-field::-webkit-input-placeholder {
+  color: var(--basic-black);
+}
+
+.modal-field::-moz-placeholder {
+  color: var(--basic-black);
+  opacity: 1;
+  text-transform: uppercase;
+}
+
+.modal-field::placeholder {
+  color: var(--basic-black);
 }
 
 .modal-icon {
@@ -584,7 +594,7 @@ a {
   right: 10px;
 }
 
-.modal-icon:hover {
+.modal-icon:hover, .modal-icon:focus {
   fill: var(--basic-black);
 }
 
@@ -596,7 +606,7 @@ a {
   display: flex;
   align-items: center;
   justify-content: left;
-  margin-bottom: 52px;
+  margin-bottom: 53px;
 }
 
 .modal-wrapper-buttons {
@@ -606,19 +616,10 @@ a {
 }
 
 .modal-number-input {
-  font-family: "PT Sans";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 26px;
-  text-transform: uppercase;
-  max-width: 38px;
-  min-height: 38px;
-  padding: 0;
-  background-color: var(--basic-background-color);
-  border: 0;
   text-align: center;
-  box-sizing: border-box;
+  line-height: 26px;
+  max-width: 38px;
+  padding: 4px;
 }
 
 .modal-number-input:hover {
@@ -629,13 +630,6 @@ a {
   background-color: var(--basic-white);
   border: 2px solid var(--border-grey);
   outline: none;
-}
-
-input::-webkit-input-placeholder {
-  font-weight: 700;
-  line-height: 26px;
-  text-transform: uppercase;
-  color: var(--basic-black);
 }
 
 .button-modal {
@@ -666,9 +660,9 @@ input::-webkit-input-placeholder {
 }
 
 .button-find-hotel {
-  width: 458px;
-  height: 58px;
-  font-family: "PT Sans";
+  width: 100%;
+  padding: 16px;
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
@@ -677,6 +671,7 @@ input::-webkit-input-placeholder {
   background-color: var(--basic-blue);
   color: var(--basic-white);
   border: none;
+  cursor: pointer;
 }
 
 .button-find-hotel:hover {
@@ -704,17 +699,34 @@ input::-webkit-input-placeholder {
   height: 594px;
 }
 
+.map-image {
+  display: block;
+}
+
+.map-iframe {
+  border: none;
+}
+
 /* Page "Hotels" */
 
 /* Filter */
 
 .filter {
-  display: grid;
-  grid-template-columns: -webkit-min-content -webkit-min-content 50%;
-  grid-template-columns: min-content min-content 50%;
-  width: 1200px;
-  height: 217px;
   background-image: url('../img/background-filter.jpg');
+  background-position: 50%;
+  background-color: var(--background-blue);
+  padding-top: 26px;
+  padding-right: 73px;
+  padding-bottom: 32px;
+  padding-left: 72px;
+  min-height: 159px;
+}
+
+.filter-form {
+  display: grid;
+  grid-template-columns: -webkit-max-content -webkit-max-content 1fr;
+  grid-template-columns: max-content max-content 1fr;
+  gap: 76px;
 }
 
 .filter-fieldset {
@@ -724,21 +736,24 @@ input::-webkit-input-placeholder {
 }
 
 .filter-legend {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
   line-height: 21px;
   color: var(--basic-white);
-  padding-bottom: 28px;
-  padding-top: 1px;
+  margin-bottom: 25px;
 }
 
-.infrastructure-list {
+.price-legend {
+  margin-bottom: 11px;
+}
+
+.filters-list {
   padding: 0;
   margin: 0;
   list-style: none;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -747,21 +762,23 @@ input::-webkit-input-placeholder {
 }
 
 .hotels-infrastructure-filter {
-  width: 180px;
-  padding-left: 73px;
-  padding-top: 25px;
+  min-width: 180px;
 }
 
-.infrastructure-list-item {
-  padding-bottom: 23px;
+.filter-option {
+  margin-bottom: 25px;
   padding-left: 41px;
+}
+
+.filter-option:last-child {
+  margin-bottom: 0;
 }
 
 .accommodation-list {
   padding: 0;
   margin: 0;
   list-style: none;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -770,9 +787,7 @@ input::-webkit-input-placeholder {
 }
 
 .hotels-accommodation-filter {
-  width: 180px;
-  padding-left: 75px;
-  padding-top: 25px;
+  min-width: 180px;
 }
 
 .accommodation-list-item {
@@ -800,6 +815,10 @@ input::-webkit-input-placeholder {
   background-image: url('../img/checkbox-on.svg');
 }
 
+.filter-input-checkbox:focus + label::before {
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
 .filter-label {
   position: relative;
   display: block;
@@ -807,13 +826,7 @@ input::-webkit-input-placeholder {
 }
 
 .hotels-price-filter {
-  width: 50%;
-  padding-left: 302px;
-  padding-top: 25px;
-}
-
-.price-legend {
-  padding-bottom: 11px;
+  justify-self: end;
 }
 
 .hotels-price-filter-inputs-wrapper {
@@ -821,12 +834,21 @@ input::-webkit-input-placeholder {
   border: 2px solid var(--basic-white);
   border-spacing: 0;
   width: 317px;
-  height: 36px;
   position: relative;
 }
 
+.min-price, .max-price {
+  font-family: "PT Sans", Arial, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
 .hotels-price-filter-input {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -848,15 +870,22 @@ input::-webkit-input-placeholder {
   width: 50%;
   text-align: center;
   margin: 0;
-  padding: 0;
+  padding: 3px 10px;
+}
+
+.min-price-column {
+  padding-left: 51px;
+}
+
+.max-price-column {
+  padding-left: 40px;
 }
 
 .hotels-price-filter-input {
   border: none;
   background-color: transparent;
   color: var(--basic-white);
-  text-align: center;
-  width: 90%;
+  width: 50%;
 }
 
 .range-controls {
@@ -910,7 +939,7 @@ input::-webkit-input-placeholder {
 }
 
 .button-show {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: normal;
   align-items: center;
@@ -938,46 +967,57 @@ input::-webkit-input-placeholder {
 .sorting {
   text-transform: uppercase;
   color: var(--basic-black);
-  display: grid;
-  grid-template-columns: 127px 130px 1fr 1fr;
-  margin-left: 73px;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 31px;
+  padding-right: 73px;
+  padding-bottom: 29px;
+  padding-left: 73px;
   }
+
+.sorting-container {
+  display: flex;
+  width: 891px;
+}
 
 .sorting-group {
   justify-self: start;
   margin: 0;
-  padding: 31px 0 37px;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  margin-left: 37px;
+  margin: 0;
+  margin-right: 40px;
 }
 
 .sorting-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin-top: 29px;
+  margin: 0;
 }
 
 .sorting-list {
   list-style: none;
   display: flex;
-  padding: 12px 40px 0 15px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
 }
 
 .sorting-list-item {
-  margin: 0.5em;
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  padding-right: 21px;
+  margin: 0;
+  margin-right: 32px;
 }
 
 .sorting-link {
@@ -985,14 +1025,14 @@ input::-webkit-input-placeholder {
   border-bottom: 1px dashed var(--basic-blue);
 }
 
-.sorting-link:hover {
-  color: var(--basic-blue);
-  border-bottom: 1px dashed var(--basic-blue);
-}
-
-.sorting-link:focus {
+.sorting-link-active {
   color: var(--basic-blue);
   border-bottom: none;
+}
+
+.sorting-link:hover, .sorting-link:focus {
+  color: var(--basic-blue);
+  border-bottom: 1px dashed var(--basic-blue);
 }
 
 .sorting-link:active {
@@ -1005,24 +1045,26 @@ input::-webkit-input-placeholder {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding-right: 62px;
-  padding-top: 5px;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
 }
 
-.sorting-icons-list path:hover {
-  fill: var(--basic-black);
-}
-
-.sorting-icons-list path:active {
+.sorting-icon-active path {
   fill: var(--basic-blue);
 }
 
-.sorting-icons-list path:focus {
+.sorting-icons-link:hover path, .sorting-icons-link:focus path {
+  fill: var(--basic-black);
+}
+
+.sorting-icons-link:active path {
   fill: var(--basic-blue);
 }
 
 .sorting-icons-item {
-  padding-right: 11px;
+  margin: 0;
+  margin-left: 12px;
 }
 
 /* Hotels Search Result */
@@ -1045,13 +1087,13 @@ input::-webkit-input-placeholder {
 }
 
 .results-header {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
-  margin-top: 31px;
-  margin-bottom: -8px;
+  margin: 0;
+  margin-bottom: 7px;
 }
 
 .result-hotel-name {
@@ -1067,7 +1109,7 @@ input::-webkit-input-placeholder {
 }
 
 .hotel-price {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -1075,36 +1117,43 @@ input::-webkit-input-placeholder {
   color: var(--dark-grey);
   display: grid;
   grid-template-columns: 116px 1fr;
-  margin-bottom: 1px;
+  margin: 0;
+}
+
+.hotel-type, .hotel-cost {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 .result-container {
-  padding: 0;
-  margin-left: 30px;
-  margin-top: -6px;
+  padding-top: 25px;
+  padding-bottom: 30px;
 }
 
 .results-list-item {
   display: grid;
-  grid-template-columns: 134px 792px 1fr;
+  grid-template-columns: 134px 1fr -webkit-max-content;
+  grid-template-columns: 134px 1fr max-content;
+  gap: 29px;
   padding: 0 73px;
   border-top: 1px solid var(--border-grey);
 }
 
 .hotel-image {
-  margin: 30px 0px 30px 0px;
+  padding: 30px 0px 30px 0px;
 }
 
 .rating {
-  justify-self: end;
-  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
 
-.button-details {
-  width: 110px;
-  height: 27px;
+.button-details, .button-book {
+  padding: 5px 17px;
   background-color: var(--basic-blue);
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 14px;
@@ -1112,36 +1161,22 @@ input::-webkit-input-placeholder {
   color: var(--basic-white);
   text-align: center;
   text-transform: uppercase;
-  border-color: transparent;
   margin-right: 2px;
+  border: none;
+  cursor: pointer;
 }
 
 .button-details:hover {
   background-color: var(--darker-blue);
-  border-color: transparent;
 }
 
 .button-details:focus, .button-details:active {
   background-color: var(--dark-blue);
   color: var(--transparent-white);
-  border-color: transparent;
-  border: 0;
-  outline: none;
 }
 
 .button-book {
-  width: 142px;
-  height: 27px;
   background-color: var(--basic-brown);
-  font-family: "PT Sans Bold";
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 21px;
-  color: var(--basic-white);
-  text-align: center;
-  text-transform: uppercase;
-  border-color: transparent;
 }
 
 .button-book:hover {
@@ -1151,56 +1186,50 @@ input::-webkit-input-placeholder {
 .button-book:focus, .button-book:active {
   background-color: var(--dark-brown);
   color: var(--transparent-white);
-  border: 0;
-  outline: none;
 }
 
 .stars-rating {
-  display: flex;
-  justify-content: flex-end;
-  vertical-align: top;
+  background-image: url("../img/star.svg");
+  background-repeat: space;
+  height: 28px;
+  margin-left: auto;
 }
 
-.star-image {
-  position: relative;
-  padding-left: 24px;
+.rating .four-stars {
+  width: 88px;
 }
 
-.star-image::before{
-  content: "";
-  position: absolute;
-  left: 7px;
-  width: 18px;
-  height: 17px;
-  background-image: url(../img/star.svg);
-  background-repeat: no-repeat;
+.rating .three-stars {
+  width: 64px;
 }
 
-.rating-hotels {
-  width: 110px;
-  height: 27px;
+.rating .two-stars {
+  width: 42px;
+}
+
+.rating-hotel {
+  padding-top: 3px;
+  padding-right: 12px;
+  padding-bottom: 3px;
+  padding-left: 15px;
   background-color: var(--basic-background-color);
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 21px;
-  color: var(--dark-grey);
-  text-align: center;
-  padding: 1px;
-  margin-top: 62px;
-  margin-left: 8px;
-}
-
-.rating-paragraph {
-  margin-top: 3px;
+  display: block;
   color: var(--rating-text-grey);
+  margin: 0;
+  margin-top: auto;
 }
 /* Footer */
 
 .main-footer {
-  width: 1200px;
-  height: 120px;
+  padding-top: 21px;
+  padding-right: 54px;
+  padding-bottom: 31px;
+  padding-left: 54px;
   background-color: var(--footer-white);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -1215,19 +1244,22 @@ input::-webkit-input-placeholder {
 }
 
 .contact {
-  margin-left: 72px;
-}
-
-.contact-paragraph {
-  font-family: "PT Sans Bold";
+  font-family: "PT Sans Bold", Arial, sans-serif;
   font-style: normal;
   font-weight: 700;
   font-size: 21px;
   line-height: 26px;
   text-align: center;
   color: var(--basic-black);
-  margin-bottom: 11px;
-  margin-top: -2px;
+  /* margin-left: 72px; */
+}
+
+.contact-paragraph {
+  margin: 0;
+}
+
+.contact-paragraph:not(:last-child) {
+  margin-bottom: 9px;
 }
 
 .telephone {
@@ -1243,6 +1275,8 @@ input::-webkit-input-placeholder {
   display: flex;
   flex-wrap: wrap;
   padding: 0;
+  margin: 0;
+  margin-top: 11px;
 }
 
 .social-network-list-item {
@@ -1278,16 +1312,17 @@ input::-webkit-input-placeholder {
 
 .designed-by {
   justify-self: center;
-  margin-right: 76px;
   margin-top: 3px;
 }
 
 .designed-by-paragraph {
-  font-family: "PT Sans";
+  font-family: "PT Sans", Arial, sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
   line-height: 26px;
+  margin: 0;
+  margin-top: 12px;
 }
 
 .academy-logo {
